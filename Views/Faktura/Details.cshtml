@@ -1,0 +1,42 @@
+﻿@model Fakturisanje.Models.Faktura
+
+@{
+    ViewData["Title"] = "Detalji fakture";
+}
+
+<h2>Detalji fakture</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumFakture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DatumFakture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BrojFakture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BrojFakture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UkupnoFaktura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UkupnoFaktura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kupac)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kupac.KupacId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FakturaId">Promeni</a> |
+    <a asp-action="Index">Nazad na listu faktura</a>
+</div>

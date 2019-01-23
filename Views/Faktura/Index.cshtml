@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Fakturisanje.Models.Faktura>
+
+@{
+    ViewData["Title"] = "Fakture";
+}
+
+
+
+<p>
+    <a asp-action="Create">Kreiraj novu fakturu</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DatumFakture)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BrojFakture)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UkupnoFaktura)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KupacId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumFakture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojFakture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UkupnoFaktura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KupacId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FakturaId">Promeni</a> |
+                <a asp-action="Details" asp-route-id="@item.FakturaId">Detalji</a> |
+                <a asp-action="Delete" asp-route-id="@item.FakturaId">Obrisi</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Dodaj korisnika u rolu";
+}
+
+<h2>Dodavanje korisnika u rolu</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DodajKorisnikaUrolu">
+            <div class="form-group">
+                <select name="imeKorisnika" class="form-control" asp-items="ViewBag.Korisnici">
+                    <option value="">Odaberite korisnika</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="uloga" class="form-control" asp-items="ViewBag.Uloge">
+                    <option value="">Odaberite ulogu</option>
+                </select>
+            </div>
+            <button class="btn btn-primary">Dodaj</button>
+        </form>
+        <br />
+        @ViewBag.Poruka
+    </div>
+</div>
+

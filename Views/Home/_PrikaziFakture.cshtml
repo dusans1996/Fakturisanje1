@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Fakturisanje.Models.Faktura>
+
+<br />
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    Datum fakture
+                </th>
+                <th>
+                    Broj fakture
+                </th>
+                <th>
+                    Ukupno
+                </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumFakture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojFakture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UkupnoFaktura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kupac.KupacId)
+            </td>
+            <td>
+                <a asp-controller="Faktura" asp-action="Edit" asp-route-id="@item.FakturaId">Promeni</a> |
+                <a asp-controller="Faktura" asp-action="Details" asp-route-id="@item.FakturaId">Detalji</a> |
+                <a asp-controller="Faktura" asp-action="Delete" asp-route-id="@item.FakturaId">Obrisi</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br />
+<p>
+    <a asp-controller="Faktura" asp-action="Create">Kreiraj novu fakturu</a>
+</p>

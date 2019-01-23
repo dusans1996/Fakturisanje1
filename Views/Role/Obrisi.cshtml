@@ -1,0 +1,19 @@
+﻿@model IdentityRole
+@{
+    ViewData["Title"] = "Obrisi rolu";
+}
+
+<h2>Da li ste sigurni da zelite da obrisete rolu?</h2>
+<h4>@Model.Name</h4>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Obrisi" method="post">
+            <input type="hidden" name="ime" value="@Model?.Name" />
+            <button type="submit" class="btn btn-danger">Obrisi</button>
+        </form>
+        <br />
+        <a asp-controller="Role" asp-action="Index">Nazad na listu rola</a>
+    </div>
+</div>
+

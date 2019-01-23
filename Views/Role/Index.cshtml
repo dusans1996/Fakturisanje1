@@ -1,0 +1,36 @@
+﻿@model IEnumerable<IdentityRole>
+@{
+    ViewData["Title"] = "Role";
+}
+
+<div class="jumbotron" style="background-color:lightblue">
+    <h1>Role</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Naziv role</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var rola in Model)
+                {
+                    <tr>
+                        <td>@rola.Name</td>
+                        <td><a asp-action="Obrisi" asp-route-ime="@rola.Name">Obrisi</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        <a asp-action="Create">Kreiraj novu rolu</a>
+    </div>
+</div>
+<br />
+<a asp-action="DodajKorisnikaUrolu">Dodaj korisnika u rolu</a>
+<br />
+@ViewBag.Poruka

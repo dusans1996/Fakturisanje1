@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Fakturisanje.Models.Stavka>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Kreiraj novu stavku</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RedniBroj)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kolicina)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cena)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ukupno)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faktura)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RedniBroj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kolicina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cena)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ukupno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faktura.BrojFakture)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StavkaId">Promeni</a> |
+                <a asp-action="Details" asp-route-id="@item.StavkaId">Detalji</a> |
+                <a asp-action="Delete" asp-route-id="@item.StavkaId">Obrisi</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

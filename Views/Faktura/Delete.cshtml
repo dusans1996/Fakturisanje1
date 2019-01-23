@@ -1,0 +1,45 @@
+﻿@model Fakturisanje.Models.Faktura
+
+@{
+    ViewData["Title"] = "Brisanje fakture";
+}
+
+<h2>Brisanje fakture</h2>
+
+<h3>Da li ste sigurni da zelite da obrisete fakturu?</h3>
+<div>
+    <h4>Faktura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumFakture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DatumFakture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BrojFakture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BrojFakture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UkupnoFaktura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UkupnoFaktura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kupac)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kupac.KupacId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="FakturaId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Nazad na listu faktura</a>
+    </form>
+</div>

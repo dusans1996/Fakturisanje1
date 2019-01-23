@@ -1,0 +1,44 @@
+﻿@model Fakturisanje.Models.Faktura
+
+@{
+    ViewData["Title"] = "Promena fakture";
+}
+
+<h2>Promena fakture</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FakturaId" />
+            <div class="form-group">
+                <label asp-for="KupacId" class="control-label"></label>
+                <select asp-for="KupacId" class="form-control" asp-items="ViewBag.KupacId"></select>
+                <span asp-validation-for="KupacId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumFakture" class="control-label"></label>
+                <input asp-for="DatumFakture" class="form-control" />
+                <span asp-validation-for="DatumFakture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojFakture" class="control-label"></label>
+                <input asp-for="BrojFakture" class="form-control" />
+                <span asp-validation-for="BrojFakture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UkupnoFaktura" class="control-label"></label>
+                <input asp-for="UkupnoFaktura" class="form-control" />
+                <span asp-validation-for="UkupnoFaktura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Nazad na listu faktura</a>
+</div>
+
