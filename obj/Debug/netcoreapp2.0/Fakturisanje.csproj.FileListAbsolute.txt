@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\bin\Debug\netcoreapp2.0\Fakturisanje.deps.json
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\bin\Debug\netcoreapp2.0\Fakturisanje.runtimeconfig.json
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\bin\Debug\netcoreapp2.0\Fakturisanje.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\bin\Debug\netcoreapp2.0\Fakturisanje.dll
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\bin\Debug\netcoreapp2.0\Fakturisanje.pdb
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\obj\Debug\netcoreapp2.0\Fakturisanje.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\obj\Debug\netcoreapp2.0\Fakturisanje.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\obj\Debug\netcoreapp2.0\Fakturisanje.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\obj\Debug\netcoreapp2.0\Fakturisanje.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\obj\Debug\netcoreapp2.0\Fakturisanje.dll
+C:\Users\Lenovo\source\repos\Fakturisanje\Fakturisanje\obj\Debug\netcoreapp2.0\Fakturisanje.pdb
